@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Challenge Leaderboard</title>
+</head>
+<body class="min-h-screen bg-white grid grid-rows-[1fr_auto] font-montserrat text-base">
+    <main class="w-full py-10">
+        <h1 class="text-xl md:text-2xl lg:text-3xl font-semibold text-center px-4">
+            30 Days Of Javascript Challenge Leaderboard
+        </h1>
+
+        <section class="mt-8 mb-16">
+            <form class="container1 add-entry-form flex flex-col gap-1 md:flex-row md:gap-2 lg:gap-4 items-center">
+                <input type="text" name="firstName" class="form-control" placeholder="First Name">
+                <input type="text" name="lastName" class="form-control" placeholder="Last Name">
+                <select name="country" class="form-control">
+                    <option value="" selected disabled>Country</option>
+                </select>
+                <input type="number" name="score" class="form-control" placeholder="Score">
+                <button type="submit" class="submit-btn">Add Player</button>
+            </form>
+            <p class="error-text text-error font-semibold text-center mt-6">
+                
+            </p>
+        </section>
+
+        <section>
+            <div class="container1">
+                <div id="leaderboard" class="leaderboard relative grid gap-1 w-full">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="w-full py-2">
+        <div class="container1">
+            <p class="text-center text-sm font-medium">&copy;<span id="year"></span> Coder's Den Intermediate Class</p>
+        </div>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

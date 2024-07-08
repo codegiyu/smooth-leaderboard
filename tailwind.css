@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-size: 16px;
+    }
+    .container1 {
+        @apply px-4 sm:px-10 md:px-10 lg:px-0 lg:w-[1000px] lg:mx-auto;
+    }
+    .form-control {
+        @apply w-full border border-primary focus:border-error outline-none py-3 px-4 text-sm;
+    }
+    .submit-btn {
+        @apply w-full outline-none py-3 px-4 text-white bg-primary text-center text-sm 
+        disabled:opacity-35 hover:bg-primary/95 active:scale-95;
+    }
+    .btn {
+        @apply bg-white hover:bg-success/75 transition-colors duration-300 ease-in-out aspect-square w-10 md:w-14 rounded-full 
+        grid place-items-center text-[12px] cursor-pointer;
+    }
+    .record {
+        @apply w-full bg-primary grid gap-2 lg:gap-6 p-4 items-center font-medium
+        transition-all duration-500 ease-in-out absolute left-0;
+        grid-template-areas: 
+            "a a a d"
+            "b b b d"
+            "c c c d";
+    }
+    .record .area-a {
+        grid-area: a;
+    }
+    .record .area-b {
+        grid-area: b;
+    }
+    .record .area-c {
+        grid-area: c;
+    }
+    .record .area-d {
+        grid-area: d;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .record {
+            grid-template-areas: "a a a a a b b b b b b b c c c d d d d d";
+        }
+    }
+}
